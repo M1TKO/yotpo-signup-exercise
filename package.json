@@ -1,5 +1,6 @@
 {
   "name": "yotpo-exercise",
+  "homepage": "http://127.0.0.1/yotpo-exercise/service",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

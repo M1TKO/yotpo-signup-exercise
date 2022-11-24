@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(239, 239, 239);
+}
+
+input,
+label,
+#signUpForm,
+#ValidateOTPForm,
+#welcome-container {
+    display: block;
+    max-width: 250px;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 0 0 1px 0 rgb(50, 50, 50);
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#signUpForm,
+#ValidateOTPForm,
+#welcome-container {
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+i {
+    color: rgb(161, 0, 0);
+    display: block;
+}
