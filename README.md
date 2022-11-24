@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+DEMO: https://dkalenderov.com/yotpo-exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**I dont send real SMS but mock the SMS provider by saving the title, message and phone in one of the database tables (sms_provider_mock)**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Task name:**
+OTP verification using an SMS message
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Task definition:**
+You have to create a website registration which requires a phone number. The number should be validated, and the client wants to use the OTP (one time password) as a solution to that problem. To put it short, you have to send an actual text message to that phone, with a generated code which should be inserted in a validation form.
 
-### `npm test`
+**Task requirements:**
+ - Create a user registration page with the following fields -> an
+   email, a phone, and a password. 
+  - Make sure that we have a well formatted phone.  The customer may enter a number using special characters, e.g. 0885 (34-53-95). As you
+   can see, the country code is missing, and since we need it, you have
+   to prepend it if it is missing. Based on the previous example, the
+   final and valid phone number should look like this: 359885345395.
+- You have to create a validation of the phone number by sending a code to the provided number (How: You can mock an SMS provider by
+   saving the messages in the database).
+- Make sure that the user can only make 3 attempts of entering the validation code. If all three of them are wrong, add a 1 minute of
+   “cooldown”.
+- Create an option which can allow the system to send a new code to the customer. Make sure that this option is available only when at
+   least 1 minute has passed since the original verification code was
+   sent.
+- Keep a log of all verification attempts.
+-  After a successfully validated phone number, we have to send a confirmation SMS message, saying “Welcome to SMSBump!”
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Tech requirements:**
+- The backend should work as a web service API and should only receive/send data to the front-end of the application. The backend should not be responsible for rendering the views of the application.
+- The frontend should be written in React.js as a single-page-application (SPA) and should work with any given backend. You can use create-react-app to escape dealing with build configurations.
