@@ -2,13 +2,16 @@
 
 class Database {
 
-  private $host, $database, $username, $password, $connection;
+  private $host, $database, $username, $password, $port, $connection;
 
-  function __construct($host = DB_HOST, $username = DB_USERNAME, $password = DB_PASSWORD, $database = DB_NAME) {
+  function __construct($host = DB_HOST, $username = DB_USERNAME, $password = DB_PASSWORD, $database = DB_NAME, $port = DB_PORT) {
     $this->host = $host;
     $this->database = $database;
     $this->username = $username;
     $this->password = $password;
+    if (!is_null($port)) {
+      $this->port = $port;
+    }
     $this->open();
   }
 
