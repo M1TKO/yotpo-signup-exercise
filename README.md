@@ -1,4 +1,4 @@
-DEMO: https://dkalenderov.com/yotpo-exercise
+DEMO: https://knz46416.cms.unibit.bg/yotpo-exercise/
 
 **I dont send real SMS but mock the SMS provider by saving the title, message and phone in one of the database tables (sms_provider_mock)**
 
